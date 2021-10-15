@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "133711953035",
+    "project_id": "radingup",
+    "storage_bucket": "radingup.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:133711953035:android:7b02e7495101fd8161288e",
+        "android_client_info": {
+          "package_name": "com.equipo3.radingup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "133711953035-pc7qqvnj09j5alce4fmq51gkn9t7jau6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.equipo3.radingup",
+            "certificate_hash": "90fb49a6b126351371db4362ab330200c2ddbad2"
+          }
+        },
+        {
+          "client_id": "133711953035-b31ricv9koi1re173m8kmtij8cgt4kj8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-sfXKOzYMNoEtxPnrm6nePDwiNw-Ug8A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "133711953035-b31ricv9koi1re173m8kmtij8cgt4kj8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
