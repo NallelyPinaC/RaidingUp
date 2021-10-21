@@ -10,6 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RadingUp">
         <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelectOptionAuthActivity"
+            android:parentActivityName=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -1,25 +1,31 @@
- package com.equipo3.radingup;
+package com.equipo3.radingup;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
- public class MainActivity extends AppCompatActivity {
+public class SelectOptionAuthActivity extends AppCompatActivity {
 
-    Button btnDriver, btnUser;
-    Context mCont = this;
+    Toolbar mToolbar;
+    Button btnIniciar, btnRegistrar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_select_option_auth);
+        mToolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle("Seleccionar Opción");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        btnDriver = findViewById(R.id.btnDriver);
-        btnUser = findViewById(R.id.btnUser);
-        btnDriver.setOnClickListener(new View.OnClickListener() {
+
+        btnIniciar = findViewById(R.id.btnDriver);
+        btnRegistrar= findViewById(R.id.btnUser);
+        btnIniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(mCont, SelectOptionAuthActivity.class);
@@ -33,6 +39,5 @@ import android.widget.Button;
                 startActivity(intent);
             }
         });
-
     }
 }
