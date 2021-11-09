@@ -36,6 +36,7 @@
             android:textStyle="bold"/>
 
         <Button
+            android:id="@+id/btnGoToLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
@@ -43,9 +44,11 @@
             android:text="YA TENGO CUENTA"
             android:backgroundTint="@color/cardview_dark_background"
             android:textColor="@color/white"
-            android:layout_marginRight="30dp"/>
+            android:layout_marginRight="30dp"
+            />
 
         <Button
+            android:id="@+id/btnGoToRegister"
             android:layout_width="match_parent"
             android:background="@drawable/rounded_button"
             android:backgroundTint="@color/cardview_dark_background"

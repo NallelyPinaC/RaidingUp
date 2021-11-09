@@ -44,8 +44,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:background="#90a4ae"
-                android:text="Soy un conductor" />
+                android:backgroundTint="#90a4ae"
+                android:text="Soy un conductor"
+                android:background="@drawable/rounded_button"/>
 
             <Button
                 android:id="@+id/btnIAmClient"
@@ -53,8 +54,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
-                android:background="@color/white"
-                android:text="Soy un pasajero" />
+                android:backgroundTint="@color/white"
+                android:text="Soy un pasajero"
+                android:background="@drawable/rounded_button"/>
+
+
 
         </LinearLayout>
 
