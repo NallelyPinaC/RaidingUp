@@ -11,7 +11,8 @@
         android:theme="@style/Theme.RadingUp">
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".SelectOptionAuthActivity"></activity>
+        <activity android:name=".SelectOptionAuthActivity"
+            android:parentActivityName=".MainActivity"></activity>
 
         <activity
             android:name=".MainActivity"

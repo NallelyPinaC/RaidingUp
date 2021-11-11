@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "133711953035",
-    "project_id": "radingup",
-    "storage_bucket": "radingup.appspot.com"
+    "project_number": "499882745960",
+    "project_id": "raidingup",
+    "storage_bucket": "raidingup.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:133711953035:android:7b02e7495101fd8161288e",
+        "mobilesdk_app_id": "1:499882745960:android:59be706d6f1fadc9e85bdd",
         "android_client_info": {
           "package_name": "com.equipo3.radingup"
         }
       },
       "oauth_client": [
         {
-          "client_id": "133711953035-pc7qqvnj09j5alce4fmq51gkn9t7jau6.apps.googleusercontent.com",
+          "client_id": "499882745960-l096obvqvss895kr8639no7plpaldhs7.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.equipo3.radingup",
-            "certificate_hash": "90fb49a6b126351371db4362ab330200c2ddbad2"
+            "certificate_hash": "2cca46b8c52fa3b50a601d77e28b5a5c070906b5"
           }
         },
         {
-          "client_id": "133711953035-b31ricv9koi1re173m8kmtij8cgt4kj8.apps.googleusercontent.com",
+          "client_id": "499882745960-3vkaprq2ccei67nmra4g0duos5qti4iv.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC-sfXKOzYMNoEtxPnrm6nePDwiNw-Ug8A"
+          "current_key": "AIzaSyBhh5wWexhxCIo7yB7ip_1uTTboEqGB4NQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "133711953035-b31ricv9koi1re173m8kmtij8cgt4kj8.apps.googleusercontent.com",
+              "client_id": "499882745960-3vkaprq2ccei67nmra4g0duos5qti4iv.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
