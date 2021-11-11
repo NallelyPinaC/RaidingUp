@@ -43,6 +43,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth'
     implementation platform('com.google.firebase:firebase-bom:28.4.2')
     implementation 'com.google.firebase:firebase-database'
+    implementation 'com.github.d-max:spots-dialog:1.1@aar'
 
 }
 apply plugin: 'com.android.application'

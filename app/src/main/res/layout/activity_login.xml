@@ -7,6 +7,7 @@
     android:fitsSystemWindows="true"
     tools:context=".LoginActivity">
 
+    <include layout="@layout/action_bar_toolbar"></include>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,7 +47,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Correo electronico"
-                    android:inputType="textEmailAddress">
+                    android:inputType="textEmailAddress"
+                    android:text="raidingadmin@gmail.com">
 
                 </com.google.android.material.textfield.TextInputEditText>
 
@@ -77,7 +79,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Contraseña"
-                    android:inputType="textPassword">
+                    android:inputType="textPassword"
+                    android:text="123456">
 
                 </com.google.android.material.textfield.TextInputEditText>
 

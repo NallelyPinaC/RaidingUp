@@ -2,7 +2,9 @@ package com.equipo3.radingup;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +18,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import dmax.dialog.SpotsDialog;
+
 public class LoginActivity extends AppCompatActivity {
 
     TextInputEditText mTextInputEmail;
@@ -25,10 +29,19 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     DatabaseReference mDatabase;
 
+    AlertDialog mDialog;
+
+    Toolbar mToolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        mToolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle("Login");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mTextInputEmail = findViewById(R.id.textInputEmail);
         getmTextInputPassword  = findViewById(R.id.textInputPassword);
@@ -36,6 +49,8 @@ public class LoginActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        mDialog = new SpotsDialog.Builder().setContext(LoginActivity.this).setMessage("Espere un momento").build();
 
         mButtonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +66,7 @@ public class LoginActivity extends AppCompatActivity {
 
     if(!email.isEmpty() && !password.isEmpty()){
         if(password.length() >= 6){
+            mDialog.show();
             mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -61,6 +77,7 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText( LoginActivity.this, "La Contraseña o el Correo son incorrecotos", Toast.LENGTH_SHORT).show();
 
                     }
+                    mDialog.dismiss();
                 }
             });
         }
