@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity"
+    tools:context=".activities.LoginActivity"
     android:background="@color/colorPrimary">
 
     <LinearLayout
@@ -22,7 +21,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="App para estudintes"
+            android:text="App para estudiantes."
             android:textAlignment="center"
             android:textColor="@color/white"
             android:layout_margin="40dp"
@@ -38,20 +37,28 @@
             android:layout_margin="20dp">
 
             <Button
+                android:id="@+id/btnIAmDriver"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:background="#90a4ae"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/cardview_dark_background"
+                android:textColor="@color/white"
                 android:text="Soy un conductor"
-                android:layout_marginRight="5dp"/>
+                android:background="@drawable/rounded_button"/>
 
             <Button
+                android:id="@+id/btnIAmClient"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
                 android:layout_marginLeft="5dp"
-                android:text="Soy un pasajero"/>
+                android:layout_weight="1"
+                android:backgroundTint="@color/cardview_dark_background"
+                android:textColor="@color/white"
+                android:text="Soy un pasajero"
+                android:background="@drawable/rounded_button"/>
+
+
 
         </LinearLayout>
 
