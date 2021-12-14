@@ -13,6 +13,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -51,9 +53,13 @@ dependencies {
     implementation 'com.google.android.libraries.places:places:1.1.0'
     implementation 'com.google.maps.android:android-maps-utils:0.5'
 
+    implementation 'androidx.multidex:multidex:2.0.1'
 
     implementation 'com.github.d-max:spots-dialog:1.1@aar'
 
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
 }
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'

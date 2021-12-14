@@ -16,6 +16,9 @@ import android.provider.Settings;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -58,6 +61,7 @@ import com.google.maps.android.SphericalUtil;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 @SuppressWarnings("Convert2Lambda")
 public class MapClientActivity extends AppCompatActivity implements OnMapReadyCallback {
@@ -90,6 +94,8 @@ public class MapClientActivity extends AppCompatActivity implements OnMapReadyCa
     private LatLng mDestinationLatLng;
 
     private GoogleMap.OnCameraIdleListener mCameraListener;
+
+    private Button mButtonRequestDriver;
 
     LocationCallback mLocationCallback = new LocationCallback() {
         @Override
@@ -141,6 +147,7 @@ public class MapClientActivity extends AppCompatActivity implements OnMapReadyCa
 
         mMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mMapFragment.getMapAsync(this);
+        mButtonRequestDriver = findViewById(R.id.btnRequestDriver);
 
         if (!Places.isInitialized()) {
             Places.initialize(getApplicationContext(), getResources().getString(R.string.google_maps_key));
@@ -151,6 +158,30 @@ public class MapClientActivity extends AppCompatActivity implements OnMapReadyCa
         instanceAutocompleteDestination();
         onCameraMove();
 
+        mButtonRequestDriver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                requestDriver();
+            }
+        });
+
+    }
+
+    private void requestDriver() {
+
+        if(mOriginLatLng != null && mDestinationLatLng != null) {
+            Intent intent = new Intent(MapClientActivity.this, DetailRequestActivity.class);
+            intent.putExtra("origin_lat", mOriginLatLng.latitude);
+            intent.putExtra("origin_lng", mOriginLatLng.longitude);
+            intent.putExtra("destination_lat", mDestinationLatLng.latitude);
+            intent.putExtra("destination_lng", mDestinationLatLng.longitude);
+            intent.putExtra("origin", mOrigin);
+            intent.putExtra("destination", mDestination);
+            startActivity(intent);
+        }
+        else{
+            Toast.makeText(this, "Debe seleccionar el lugar de recogida y el detino primero", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void limitSearch(){

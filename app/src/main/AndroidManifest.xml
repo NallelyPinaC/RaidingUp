@@ -2,8 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.equipo3.radingup">
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -13,44 +14,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RadingUp"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activities.LoginActivity"
+        <activity
+            android:name=".activities.client.DetailRequestActivity"
             android:parentActivityName=".activities.SelectOptionAuthActivity" />
-
-        <activity android:name=".activities.driver.RegisterDriverActivity"
-            android:parentActivityName=".activities.SelectOptionAuthActivity"/>
-
-        <activity android:name=".activities.client.RegisterActivity"
-            android:parentActivityName=".activities.SelectOptionAuthActivity"/>
-
-        <activity android:name=".activities.SelectOptionAuthActivity"
-           />
-
-        <activity android:name=".activities.client.MapClientActivity"
-            />
-
-        <activity android:name=".activities.driver.MapDriverActivity"
-            />
-
-
-        <activity android:name=".activities.MainActivity"
+        <activity
+            android:name=".activities.LoginActivity"
+            android:parentActivityName=".activities.SelectOptionAuthActivity" />
+        <activity
+            android:name=".activities.driver.RegisterDriverActivity"
+            android:parentActivityName=".activities.SelectOptionAuthActivity" />
+        <activity
+            android:name=".activities.client.RegisterActivity"
+            android:parentActivityName=".activities.SelectOptionAuthActivity" />
+        <activity android:name=".activities.SelectOptionAuthActivity" />
+        <activity android:name=".activities.client.MapClientActivity" />
+        <activity android:name=".activities.driver.MapDriverActivity" />
+        <activity
+            android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/google_maps_key"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
     </application>
 
 </manifest>
-
-
-
-
-
-
-
-
-
-
-

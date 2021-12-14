@@ -38,8 +38,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nombre completo"
-                    android:inputType="text"
-                    android:text="test">
+                    android:inputType="text">
 
                 </com.google.android.material.textfield.TextInputEditText>
 
@@ -72,8 +71,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Correo electronico"
-                    android:inputType="textEmailAddress"
-                    android:text="textd@gmail.com">
+                    android:inputType="textEmailAddress">
 
                 </com.google.android.material.textfield.TextInputEditText>
 
@@ -104,8 +102,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Marca del vehiculo"
-                    android:inputType="textEmailAddress"
-                    android:text="test">
+                    android:inputType="textEmailAddress">
 
                 </com.google.android.material.textfield.TextInputEditText>
 
@@ -136,8 +133,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Placa del vehiculo"
-                    android:inputType="textEmailAddress"
-                    android:text="test">
+                    android:inputType="textEmailAddress">
 
                 </com.google.android.material.textfield.TextInputEditText>
 
@@ -168,8 +164,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Contraseña"
-                    android:inputType="textPassword"
-                    android:text="testtest">
+                    android:inputType="textPassword">
 
                 </com.google.android.material.textfield.TextInputEditText>
 
